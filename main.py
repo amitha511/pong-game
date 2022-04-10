@@ -1,5 +1,4 @@
 import turtle
-from tkinter import *
 
 # windows
 wn = turtle.Screen()
@@ -37,6 +36,40 @@ ball.goto(0, 0)
 ball.dx = 0.20  # data change x
 ball.dy = -0.20  # data change y
 
+
+# func
+def paddle_a_up():
+        y = paddle_a.ycor()
+        y += 20  # up
+        paddle_a.sety(y)
+
+
+def paddle_a_down():
+         y = paddle_a.ycor()
+         y -= 20  # up
+         paddle_a.sety(y)
+
+
+def paddle_b_up():
+        y = paddle_b.ycor()
+        y += 20  # up
+        paddle_b.sety(y)
+
+
+def paddle_b_down():
+        y = paddle_b.ycor()
+        y -= 20  # up
+        paddle_b.sety(y)
+
+
+# keyboard
+wn.listen()
+wn.onkeypress(paddle_a_up, "W")
+wn.onkeypress(paddle_a_up, "w")
+wn.onkeypress(paddle_a_down, "S")
+wn.onkeypress(paddle_a_down, "s")
+wn.onkeypress(paddle_b_up, "Up")
+wn.onkeypress(paddle_b_down, "Down")
 
 
 # main game loop
