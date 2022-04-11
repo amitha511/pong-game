@@ -1,4 +1,5 @@
 import turtle
+import winsound
 
 # windows
 wn = turtle.Screen()
@@ -52,7 +53,8 @@ pen.goto(0, 260)
 
 def penUpDate():
     pen.clear()
-    pen.write("{}: {}          {}: {}".format(name_a, score_a, name_b, score_b), align="center", font=("@Dotum", 24, "normal"))
+    pen.write("{}: {}          {}: {}".format(name_a, score_a, name_b, score_b), align="center",
+              font=("@Dotum", 24, "normal"))
 
 
 penUpDate()
@@ -110,9 +112,11 @@ while True:
         ball.sety(290)
         ball.dy *= -1
 
+
     if ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
+
 
     if ball.xcor() > 390:
         ball.setx(390)
@@ -121,6 +125,7 @@ while True:
         score_a += 1
         penUpDate()
 
+
     if ball.xcor() < -390:
         ball.setx(-390)
         ball.goto(0, 0)  # new round
@@ -128,11 +133,14 @@ while True:
         score_b += 1
         penUpDate()
 
+
     # paddle and ball collisions
     if (340 < ball.xcor() < 350) and (paddle_b.ycor() + 40 > ball.ycor() > paddle_b.ycor() - 50):
         ball.setx(340)
+        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
         ball.dx *= -1
 
     if (-340 > ball.xcor() > -350) and (paddle_a.ycor() + 40 > ball.ycor() > paddle_a.ycor() - 50):
         ball.setx(-340)
+        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
         ball.dx *= -1
