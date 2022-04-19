@@ -4,7 +4,8 @@ import winsound
 # windows
 wn = turtle.Screen()
 wn.title("pong by Amit Halfon")
-wn.bgpic("space.png")
+wn.bgcolor("#EBDEF0")
+wn.bgpic("resources/space.png")
 wn.setup(width=800, height=600)
 wn.tracer(0)
 name_a = wn.textinput("player A", "Please enter the name of player A:")
