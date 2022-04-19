@@ -3,7 +3,7 @@
 A simple pong game for multiplayer.
 
 
-![controller](resources/gif.gif)
+![controller](resources/giff.gif)
 
 
 ## Features:
