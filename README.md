@@ -7,7 +7,7 @@ A simple pong game for multiplayer.
 
 
 ## Features:
-* Score - the goal is to try and move the ball past your opponent's paddle
+* Score - the goal is to try and move the ball past your opponent's paddle,
 When the ball passes the paddle the other player gets a point
 
 <br>
