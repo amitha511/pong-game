@@ -4,7 +4,7 @@ import winsound
 # windows
 wn = turtle.Screen()
 wn.title("pong by Amit Halfon")
-wn.bgcolor("#EBDEF0")
+wn.bgpic("space.png")
 wn.setup(width=800, height=600)
 wn.tracer(0)
 name_a = wn.textinput("player A", "Please enter the name of player A:")
@@ -18,7 +18,7 @@ score_b = 0
 paddle_a = turtle.Turtle()
 paddle_a.speed(0)
 paddle_a.shape("square")
-paddle_a.color("#1B2631")
+paddle_a.color("#FFF4F4")
 paddle_a.shapesize(stretch_wid=5, stretch_len=1)  # size
 paddle_a.penup()
 paddle_a.goto(-350, 0)
@@ -27,7 +27,7 @@ paddle_a.goto(-350, 0)
 paddle_b = turtle.Turtle()
 paddle_b.speed(0)
 paddle_b.shape("square")
-paddle_b.color("#1B2631")
+paddle_b.color("#FFF4F4")
 paddle_b.shapesize(stretch_wid=5, stretch_len=1)  # size
 paddle_b.penup()
 paddle_b.goto(350, 0)
@@ -36,16 +36,16 @@ paddle_b.goto(350, 0)
 ball = turtle.Turtle()
 ball.speed(0)
 ball.shape("circle")
-ball.color("#1B2631")
+ball.color("#FFF4F4")
 ball.penup()
 ball.goto(0, 0)
-ball.dx = 0.20  # data change x
-ball.dy = -0.20  # data change y
+ball.dx = 0.40  # data change x
+ball.dy = -0.40  # data change y
 
 # Pen
 pen = turtle.Turtle()
 pen.speed(0)
-pen.color("#1B2631")
+pen.color("#FFF4F4")
 pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
@@ -53,8 +53,7 @@ pen.goto(0, 260)
 
 def penUpDate():
     pen.clear()
-    pen.write("{}: {}          {}: {}".format(name_a, score_a, name_b, score_b), align="center",
-              font=("@Dotum", 24, "normal"))
+    pen.write("{}: {}                                            {}: {}".format(name_a, score_a, name_b, score_b), align="center", font=("@Dotum", 24, "bold"))
 
 
 penUpDate()
