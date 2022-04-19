@@ -4,7 +4,7 @@ A simple pong game for multiplayer.
 
 
 <p align = "center">
-    <img src = https://github.com/amitha511/python-pongGame/blob/master/resources/gif1.gif width="400" height="200" />
+    <img src = https://github.com/amitha511/python-pongGame/blob/master/resources/gif1.gif width="400" height="300" />
 
 
 ## Features:
