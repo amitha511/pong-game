@@ -3,7 +3,8 @@
 A simple pong game for multiplayer.
 
 
-![controller](resources/gif1.gif)
+<p align = "center">
+    <img src = https://github.com/amitha511/python-pongGame/blob/master/resources/gif1.gif width="400" height="200" />
 
 
 ## Features:
