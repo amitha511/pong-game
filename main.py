@@ -137,10 +137,8 @@ while True:
     # paddle and ball collisions
     if (340 < ball.xcor() < 350) and (paddle_b.ycor() + 40 > ball.ycor() > paddle_b.ycor() - 50):
         ball.setx(340)
-        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
         ball.dx *= -1
 
     if (-340 > ball.xcor() > -350) and (paddle_a.ycor() + 40 > ball.ycor() > paddle_a.ycor() - 50):
         ball.setx(-340)
-        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
         ball.dx *= -1
